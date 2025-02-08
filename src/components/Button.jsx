@@ -13,7 +13,7 @@ const ButtonPrimary = ({
             <a
             href={href}
             target={target}
-            className={"btn btn-primary " + classes}>
+            className={"btn btn-primary flex items-center justify-center gap-2 px-6 py-3 text-center" + classes}>
                 {label}
 
                 {icon ?
@@ -27,7 +27,7 @@ const ButtonPrimary = ({
         )
     } else {
         return (
-            <button className={"btn btn-primary " + classes}>
+            <button className={"btn btn-primary flex items-center justify-center gap-2 px-6 py-3 text-center" + classes}>
                 {label}
             </button>
 
@@ -55,7 +55,7 @@ const ButtonOutline = ({
             <a
                 href={href}
                 target={target}
-                className={"btn btn-outline " + classes}>
+                className={"btn btn-outline flex items-center justify-center gap-2 px-6 py-3 text-center" + classes}>
                 {label}
 
                 {icon ?
@@ -69,7 +69,7 @@ const ButtonOutline = ({
         )
     } else {
         return (
-            <button className={"btn btn-outline " + classes}>
+            <button className={"btn btn-outline flex items-center justify-center gap-2 px-6 py-3 text-center" + classes}>
                 {label}
             </button>
 
