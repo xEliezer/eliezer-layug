@@ -41,6 +41,11 @@ body {
     @apply absolute bg-zinc-50 rounded-lg -z-10 transition-[top,left,width,height] duration-500
 }
 
+
+/* ----------------------------------------------------------------*\
+* BUTTONS
+\*----------------------------------------------------------------*/
+
 .btn {
     @apply max-w-max h-9 md:flex items-center gap-2 px-4 rounded-xl font-medium text-sm 
     ring-1 ring-zinc-50/5 ring-inset transition-[background-color]
@@ -49,6 +54,24 @@ body {
 .btn-secondary {
     @apply bg-zinc-50 text-zinc-900 active:bg-zinc-50/80
 }
+
+.btn .material-symbols-rounded {
+    @apply text-[18px]
+}
+
+.btn:has( .material-symbols-rounded) {
+    @apply pr-3
+}
+
+.btn-primary {
+    @apply h-11 bg-sky-400 text-zinc-950 hover:bg-sky-300
+    active:bg-sky-400
+}
+
+.btn-outline {
+    @apply h-11 bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-800
+}
+
 
 /* ----------------------------------------------------------------*\
 * UTILITIES
@@ -75,6 +98,13 @@ body {
 /* ----------------------------------------------------------------*\
 * TYPHOGRAPHY
 \*----------------------------------------------------------------*/
+.headline-1 {
+    @apply max-w-max;
+    background: -webkit-linear-gradient(0deg, #fafafa, #00b7ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent !important;
+}
+
 
 .headline-1 {
     @apply text-5xl leading-tight font-semibold lg:text-[55px]
