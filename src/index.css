@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import "tailwindcss";
+@import "tailwind-scrollbar-utilities";
 
 
 html {
     scroll-behavior: smooth;
+    @apply scrollbar-thin scrollbar-color scrollbar-track-zinc-900 scrollbar-thumb-zinc-800;
 }
 
 body {
@@ -47,7 +49,7 @@ body {
 \*----------------------------------------------------------------*/
 
 .btn {
-    @apply max-w-max h-9 md:flex items-center gap-2 px-4 rounded-xl font-medium text-sm 
+    @apply  h-9 md:flex items-center gap-2 px-4 rounded-xl font-medium text-sm 
     ring-1 ring-zinc-50/5 ring-inset transition-[background-color]
 }
 
@@ -64,7 +66,7 @@ body {
 }
 
 .btn-primary {
-    @apply h-11 bg-sky-400 text-zinc-950 hover:bg-sky-300
+    @apply max-w-full h-11 bg-sky-400 text-zinc-950 hover:bg-sky-300
     active:bg-sky-400
 }
 
@@ -96,18 +98,49 @@ body {
     @apply w-full h-full object-cover
 }
 
+.section {
+    @apply pt-20 lg:pt-32
+}
+
+.reveal-up {
+    @apply translate-y-20 opacity-0
+}
+
 /* ----------------------------------------------------------------*\
 * TYPHOGRAPHY
 \*----------------------------------------------------------------*/
-.headline-1 {
+.headline-1, .headline-2 {
     @apply max-w-max;
-    background: -webkit-linear-gradient(0deg, #fafafa, #00b7ff);
+    background: -webkit-linear-gradient(0deg, #fafafa, #a1a1a1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent !important;
 }
 
-
 .headline-1 {
     @apply text-5xl leading-tight font-semibold lg:text-[55px]
     lg:leading-[1.15]
+}
+
+.headline-2 {
+    @apply text-3xl lg:text-4xl lg:leading-tight font-semibold
+}
+
+.title-1 {
+    @apply text-[22px] font-normal
+}
+
+/* Text Fields */
+
+.label {
+    @apply block text-zinc-200 text-sm font-normal mb-2
+}
+
+.text-field {
+    @apply block outline-none w-full px-3 py-3 text-sm bg-zinc-800 
+    rounded-xl ring-1 ring-inset ring-transparent transition-shadow
+    hover:ring-zinc-50/5 focus:ring-sky-400 focus:ring-2
+}
+
+.text-field::placeholder {
+    @apply text-zinc-400
 }

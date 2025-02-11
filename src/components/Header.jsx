@@ -1,7 +1,10 @@
 import { useState } from "react";
 import Navbar from "./Navbar";
+import DarkModeToggle from "./DarkModeToggle";
+
 
 const Header = () => {
+
     const [navOpen, setNavOpen] = useState(false);
 
     return (
@@ -9,7 +12,7 @@ const Header = () => {
             <div className="max-w-screen-2xl w-full mx-auto px-4 flex justify-between items-center md:px-6 md:grid-cols-[1fr,3fr,1fr]">
                 <h1>
                     <a href="/" className="logo">
-                        <img src="/devlogo-white.svg" width={40} height={40} alt="Eliezer Layug" />
+                        <img src="/images/devlogo-white.svg" width={40} height={40} alt="Eliezer Layug" />
                     </a>
                 </h1>
 
@@ -28,13 +31,16 @@ const Header = () => {
                     <Navbar navOpen={navOpen} />
                 </div>
 
-                <a
-                    href="#contact"
-                    className="btn btn-secondary hidden md:block md:justify-self-end"
-                >
-                    Contact Me
-                </a>
+                <div className="flex items-center gap-4">
+                    
+                    <a href="#contact" className="btn btn-secondary hidden md:block">
+                        Let&apos;s Talk
+                    </a>
+
+                    <DarkModeToggle />  {/* ✅ Add the Switch component here */}
+                </div>
             </div>
+            
         </header>
     );
 };
