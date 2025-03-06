@@ -39,7 +39,7 @@ const Hero = () => {
 
                     <div className="flex items-center gap-3">
                         <ButtonPrimary 
-                            href="/public/Eliezer B. Layug - CV.pdf" 
+                            href="https://eliezer-layug-portfolio.vercel.app/files/Eliezer B. Layug - CV.pdf" 
                             label="Download CV"
                             icon="download"
                         />
